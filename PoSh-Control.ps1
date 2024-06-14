@@ -285,7 +285,6 @@ Function BalloonPopup {
     sleep -m 100
 }
 
-cls
 Write-Host "Monitor Started!" -ForegroundColor Green
 sleep 1 
 Write-Host "Setting Window To Background.."

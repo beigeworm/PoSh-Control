@@ -72,7 +72,7 @@ function EnableLogging{
 `$transcriptDir = Join-Path ([Environment]::GetFolderPath("MyDocuments")) WindowsPowerShell
 `$dateStamp = Get-Date -Format ((Get-culture).DateTimeFormat.SortableDateTimePattern -replace ':','.')
 try {
-    Start-Transcript "`$transcriptDir\Transcripts\Transcript.`$dateStamp.txt" | Out-File -FilePath "$transcriptDir\Transcripts_Logging.txt" -Append
+    Start-Transcript "`$transcriptDir\Transcripts\Transcript.`$dateStamp.txt" | Out-File -FilePath "`$transcriptDir\Transcripts_Logging.txt" -Append
 }
 catch [System.Management.Automation.PSNotSupportedException]{
     return
